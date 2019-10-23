@@ -18,7 +18,7 @@ exports.createStuff =(async (req, res, next)=>{
   }).catch(
     (error=>{
       res.status(400).json({
-          error: error
+          error
       });
   })); // saving data... and sending response if successfully saved
   console.log(req.body)
@@ -33,7 +33,7 @@ exports.getStuffs = (async (req, res, next)=>{
     })).catch(
       (error=>{
       return res.status(400).json({
-        error: error
+        error
       })
     }))
   
@@ -46,7 +46,9 @@ exports.getStuff = (async (req, res, next)=>{
     }).then((thing)=>{
       return res.status(200).json(thing)
     }).catch((error)=>{
-      return res.status(404).json(error)
+      return res.status(404).json({
+          error
+        })
     });
     next();
 

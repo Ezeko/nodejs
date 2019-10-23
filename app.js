@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://Ezeko:roJvlMY8Lqep3SxB@cluster0-rlzyx.mongodb.ne
         console.log('connected to mongodb atlas successfully!');
     }).catch((error)=>{
         console.log({
-            error: error
+            error
         });
     });
 
