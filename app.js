@@ -3,7 +3,6 @@
 const express = require('express'); //import express
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const Thing = require('./models/thing');
 
 const cors = require('cors');
 const Router = require('./routers/router.js')
